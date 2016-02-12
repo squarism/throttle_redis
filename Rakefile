@@ -11,3 +11,15 @@ task :enqueue do
   require_relative './enqueue_work'
   Tasker.create_fake_work
 end
+
+desc "Enqueue a bunch of work"
+task :bulk_enqueue do
+  require_relative './enqueue_work'
+
+  1.upto(20) do |i|
+    job_name = "Job_#{i}"
+    puts "Creating work for #{job_name}"
+    Tasker.create_fake_work name:job_name
+  end
+
+end

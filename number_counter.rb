@@ -1,6 +1,6 @@
 require 'sidekiq-ent'
 
-COUNT_LIMITER = Sidekiq::Limiter.concurrent('number_counter', 2, wait_timeout: 5, lock_timeout: 30)
+COUNT_LIMITER = Sidekiq::Limiter.concurrent('number_counter', 2, wait_timeout: 5, lock_timeout: 15)
 
 
 class NumberCounter

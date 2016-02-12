@@ -1,5 +1,10 @@
 source "https://rubygems.org"
 
 gem "rake"
-gem "sidekiq-ent", "~> 0.7.8"
 gem "faker"
+
+gem "sidekiq", "< 5"
+gem "redis-namespace"
+
+# using a previously installed private version
+gem "sidekiq-ent", "~> 1.0"
