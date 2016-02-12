@@ -19,7 +19,7 @@ feature.
     bundle install  (this will fail if you have never installed sidekiq-ent before)
 
     # run three of these in three different terminals
-    be rake work
+    be rake worker
 
     # run this a few times, as much as you want to queue up work
     be rake enqueue
